@@ -4,12 +4,24 @@
   --font-heading-weight: 500;
 }
 
+body {
+  font-size: 1.6rem;
+}
+
 /* Announcmentment Bar */
 
 .announcement-bar__message {
     font-weight: 700;
     letter-spacing: 0.05rem;
     font-size: calc(var(--font-heading-scale) * 1.4rem);
+}
+
+@media only screen and (max-width: 500px) {
+  .announcement-bar__message {
+      font-weight: 600;
+      letter-spacing: .05rem;
+      font-size: calc(var(--font-heading-scale) * 1.3rem);
+  }
 }
 
 /* HEADER MENU */
@@ -501,7 +513,7 @@ button.slider-button span {
     font-weight: 400;
     line-height: 41.6px;
     text-align: left;
-    color: #858585;
+    color: rgba(var(--color-foreground), 0.90);
 }
 
 .shopify-pricee span s {
@@ -895,7 +907,7 @@ div[data-shopify=shop-promise-payment-button-slot] {
 /* Website  */
 
 .full-unstyled-link {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
 }
 
 /* Relative image */
