@@ -1,0 +1,61 @@
+<div class="relative-banner-image-main">
+  <div class="page-width">
+    <a href="#{{ section.settings.text_tag }}">
+      {%- if section.settings.desktop_image != blank -%}
+        <div class="relative-image-desktop">
+          {{ 
+          section.settings.desktop_image | 
+          image_url: width: 1500, height: 385 |
+          image_tag:
+            sizes: "(min-width: 1400px) 1300px, (min-width: 750px) calc((100vw - 130px) / 1), calc((100vw - 50px) / 1)"
+          }}
+        </div>
+      {%- endif -%}
+      {%- if section.settings.mobile_image != blank -%}
+        <div class="relative-image-mobile">
+          {{ 
+          section.settings.mobile_image | 
+          image_url: width: 1500, height: 2142 |
+          image_tag:
+            sizes: "(min-width: 1400px) 1300px, (min-width: 750px) calc((100vw - 130px) / 1), calc((100vw - 50px) / 1)"
+          }}
+        </div> 
+      {%- endif -%}
+    </a>
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Sale Banner (Relative)",
+    "tag": "section",
+    "class": "relative-image-part",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "desktop_image",
+        "label": "Desktop Image",
+        "info": "Add image that displays on Desktops."
+      },
+      {
+        "type": "image_picker",
+        "id": "mobile_image",
+        "label": "Mobile Image (required)",
+        "info": "If empty, image will not display on Mobile devices."
+      },
+      {
+        "type": "text",
+        "id": "text_tag",
+        "label": "Quick tag to connect with product"
+      },
+    ],
+    "presets": [
+    {
+      "name": "Sale Banner (Relative)",
+      "category": "Custom"
+    }
+   ]
+  }
+{% endschema %}
