@@ -73,9 +73,15 @@
   {%- endif -%}
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
-  <div class="page-width">
-    <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
+  <div class="page-width product-no-padding-container">
+    <div {% if section.settings.text_tag != blank %} id="{{ section.settings.text_tag }}" {% endif %} class="product-main-class product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper">
+        <style>    
+          .hide-media{
+            display:none;
+            width:0;
+          }
+        </style>
         {% render 'product-media-gallery', variant_images: variant_images %}
       </div>
       <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
@@ -106,7 +112,7 @@
                   </a>
                 </div>
               {%- when 'price' -%}
-                <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+                <div class="shopify-pricee" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price',
                     product: product,
                     use_variant: true,
@@ -2077,6 +2083,12 @@
     }
   ],
   "settings": [
+    {
+      "type": "text",
+      "id": "text_tag",
+      "label": "Quick tag to connect with Sale Banner",
+      "info": "Use the same label from the \"Sale Banner\" section"
+    },
     {
       "type": "checkbox",
       "id": "enable_sticky_info",
