@@ -7,9 +7,10 @@ your store is currently popping.
 
 ## To get started:
 
-1. Download our dawn-super-theme.zip
-2. Add it to your Shopify theme
+1. Download our [dawn-super-theme.zip] (once you click the link, click the 'down' arrow on top-right to of the screen to download.
+2. Import it to your Shopify theme in your `Online Store` section of your Shopify Admin page.
 
 And that's it. Make sure you update your information on there, and set your color scheme's right!
 
 [Dawn Dropship Theme]: https://github.com/itsvictoroyedeji/dawn-dropship-theme
+[dawn-super-theme.zip]: https://drive.google.com/file/d/1qORhVvJ0UToXrPMxRzh0ZaIekvcb5Olh/view?usp=drive_link
