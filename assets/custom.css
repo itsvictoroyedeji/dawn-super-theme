@@ -8,7 +8,26 @@ body {
   font-size: 1.6rem;
 }
 
-/* Announcmentment Bar */
+/* Website  */
+
+.full-unstyled-link {
+  font-size: 1.5rem;
+}
+
+.cart-drawer .cart-item__image {
+border-radius: 10px;
+}
+
+.footer-block__details-content .list-menu__item--link, .copyright__content a,
+.footer-block__brand-info .rte p {
+color: rgba( var(--color-foreground), 0.9) !important;
+}
+
+.footer-block__heading {
+  font-size: calc( var(--font-heading-scale) * 2rem ) !important;
+}
+
+/* Announcement Bar */
 
 .announcement-bar__message {
     font-weight: 700;
@@ -902,12 +921,6 @@ div[data-shopify=shop-promise-payment-button-slot] {
   .product-form__buttons .shopify-payment-button * {
     display: block;
   }
-}
-
-/* Website  */
-
-.full-unstyled-link {
-    font-size: 1.5rem;
 }
 
 /* Relative image */
