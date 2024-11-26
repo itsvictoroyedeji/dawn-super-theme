@@ -13,4 +13,4 @@ your store is currently popping.
 And that's it. Make sure you update your information on there, and set your color scheme's right!
 
 [Dawn Dropship Theme]: https://github.com/itsvictoroyedeji/dawn-dropship-theme
-[dawn-super-theme.zip]: https://drive.google.com/file/d/1qORhVvJ0UToXrPMxRzh0ZaIekvcb5Olh/view?usp=drive_link
+[dawn-super-theme.zip]: https://drive.google.com/file/d/1F5eCKhsYuqMfbL6kD-xfOLrL_7B0u0Fa/view?usp=drive_link
